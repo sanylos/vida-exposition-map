@@ -1,9 +1,11 @@
 import Image from "next/image";
-
+import './page.scss'
 export default function Home() {
   return (
     <main className="">
-      
+      <div className="expozice-img min-h-screen w-full bg-white text-black">
+
+      </div>
       <div className="flex flex-row items-center justify-center container">
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-cyan-100">
           <img className="w-full" src="https://mscb.vida.cz/_media/cz/prace/programator2024/czmap.png" alt="Sunset in the mountains" />
