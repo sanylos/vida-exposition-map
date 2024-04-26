@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-xl navbar-dark bg-black position-relative px-xl-5 bg-cyan-900" style={{ height: '5.5rem' }}>
-      <div className="flex justify-start items-center h-full w-auto">
+      <div className="flex justify-between items-center h-full w-auto">
         <svg className="ms-10 ps-1" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="143.455px" height="59px" viewBox="56.772 0 143.455 59" enable-background="new 56.772 0 143.455 59" xmlSpace="preserve"><g id="Layer_1_1_"></g><g id="Layer_2"></g><g id="Layer_3"><g>
           <polygon fill="#FFFFFF" points="80.448,16.018 71.226,33.545 70.794,44.762 66.372,36.025 69.068,18.714 59.038,21.087 
 			56.772,40.987 67.073,59 80.232,56.088 82.821,27.504 90.695,13.59 		"></polygon>
@@ -19,6 +19,9 @@ const Navbar = () => {
         </g>
         </g>
         </svg>
+        <span className='me-10 text-xl'>
+          MAPA EXPOZICE
+        </span>
       </div>
     </nav>
   )
