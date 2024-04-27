@@ -10,8 +10,13 @@ export default function Home() {
         <div className="flex justify-center items-center p-1 md:p-10">
           <div className="rounded overflow-hidden shadow-lg bg-white text-black relative z-10">
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">
-                <div>Mapa expozice</div>
+              <div className="flex justify-between items-center">
+                <div className="font-bold text-3xl mb-2">Mapa expozice</div>
+                <div>
+                  <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400">
+                    Soft
+                  </button>
+                </div>
               </div>
               <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
             </div>
