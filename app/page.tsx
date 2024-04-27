@@ -10,8 +10,10 @@ export default function Home() {
         <div className="flex justify-center items-center p-1 md:p-10">
           <div className="rounded overflow-hidden shadow-lg bg-white text-black relative z-10">
             <div className="px-6 py-4">
-              <div className="font-bold text-xl mb-2">Mapa expozice</div>
-              <img className="w-auto h-auto" src="https://mscb.vida.cz/_media/cz/prace/programator2024/czmap.png" alt="Mapa expozice" />
+              <div className="font-bold text-xl mb-2">
+                <div>Mapa expozice</div>
+              </div>
+              <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
             </div>
           </div>
         </div>
