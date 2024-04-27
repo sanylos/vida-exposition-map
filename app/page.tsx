@@ -1,6 +1,28 @@
 import Image from "next/image";
 import './page.scss'
 export default function Home() {
+  const data = [
+    {
+      floor: 1,
+      map_url: '/images/expozice_mapa1.png',
+      expositions: [
+        {
+          title: "Nejaka expozice",
+          description: "Tady se neco nachazi"
+        }
+      ],
+    },
+    {
+      floor: 2,
+      map_url: '/images/expozice_mapa1.png',
+      expositions: [
+        {
+          title: "Nejaka expozice v druhem podlazi",
+          description: "Tady se neco nachazi"
+        }
+      ],
+    }
+  ]
   return (
     <main className="">
       <div className="expozice-img min-h-screen w-full relative">
