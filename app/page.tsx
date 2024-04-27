@@ -34,10 +34,15 @@ export default function Home() {
             <div className="px-6 py-4">
               <div className="flex justify-between items-center">
                 <div className="font-bold text-3xl mb-2">Mapa expozice</div>
-                <div>
-                  <button type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400">
-                    Soft
-                  </button>
+                <div className="flex">
+                  {data.map(item => (
+                    <div key={item.floor}>
+                      <input id={'floor' + item.floor} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
+                      <label htmlFor={'floor' + item.floor} className="ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400">
+                        {item.floor}
+                      </label>
+                    </div>
+                  ))}
                 </div>
               </div>
               <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
