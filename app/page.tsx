@@ -2,6 +2,7 @@
 import Image from "next/image";
 import './page.scss'
 import { useState } from "react";
+import { FaStairs } from "react-icons/fa6";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
   const data = [
@@ -37,8 +38,11 @@ export default function Home() {
             <div className="px-6 py-4">
               <div className="flex justify-between items-center">
                 <div className="font-bold text-3xl mb-2">Mapa expozice</div>
-                <div className="flex">
-                  {JSON.stringify(selectedFloor)}
+                <div className="flex items-center">
+                  {/*JSON.stringify(selectedFloor)*/}
+                  <div className="bg-gray-200 rounded py-3 px-4">
+                    <FaStairs className="text-xl" />
+                  </div>
                   {data.map(item => (
                     <div key={item.floor}>
                       <input id={'floor' + item.floor} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
