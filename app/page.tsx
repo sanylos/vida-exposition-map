@@ -5,6 +5,28 @@ import { useState } from "react";
 import { FaStairs } from "react-icons/fa6";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
+  const expositions = [
+    {
+      name: 'Bastlírna',
+      description: 'Popis bastlírny...',
+      floor: 1,
+    },
+    {
+      name: 'Člověk',
+      description: 'Popis člověka...',
+      floor: 1,
+    },
+    {
+      name: 'Mikrosvět',
+      description: 'Popis mikrosvěta...',
+      floor: 1,
+    },
+    {
+      name: 'Civilizace',
+      description: 'Popis civilizace...',
+      floor: 1,
+    },
+  ]
   const data = [
     {
       floor: 1,
@@ -46,7 +68,7 @@ export default function Home() {
                   {data.map(item => (
                     <div key={item.floor}>
                       <input id={'floor' + item.floor} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
-                      <label htmlFor={'floor' + item.floor} className={(selectedFloor == item.floor && "bg-blue-300 text-blue-900")+" ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-300 text-blue-400"}>
+                      <label htmlFor={'floor' + item.floor} className={(selectedFloor == item.floor && "bg-blue-300 text-blue-900") + " ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-300 text-blue-400"}>
                         {item.floor}
                       </label>
                     </div>
