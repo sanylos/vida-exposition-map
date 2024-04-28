@@ -9,6 +9,7 @@ const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
     return (
         <div style={{
             backgroundImage: 'url(' + exposition.image + ')',
+            transition: 'ease 2s background-position'
         }}
             className="bg-cover bg-start hover:bg-center mb-1 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
             <div className="flex flex-col justify-between p-4 leading-normal">
