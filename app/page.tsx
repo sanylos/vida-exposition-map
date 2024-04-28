@@ -55,7 +55,7 @@ export default function Home() {
         <img className="absolute inset-0 w-full h-full object-cover" src="https://vida.cz/images/headers/main/145/_thumb1/expoziceweb-1.webp" alt="Sunset in the mountains" />
         <div className="overlay"></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="flex justify-center items-center p-1 md:p-10">
+        <div className="flex flex-row justify-center items-start p-1 md:p-10">
           <div className="rounded overflow-hidden shadow-lg bg-white text-black relative z-10">
             <div className="px-6 py-4">
               <div className="flex justify-between items-center">
@@ -77,6 +77,17 @@ export default function Home() {
               </div>
               <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
             </div>
+          </div>
+          <div className="ms-1 rounded overflow-hidden shadow-lg text-black relative z-10 h-full">
+            {expositions.map((exposition, index) => (
+              <div key={index} className="mb-1 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
+                <div className="flex flex-col justify-between p-4 leading-normal">
+                  <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">{exposition.name}</h5>
+                  <p className="mb-3 font-normal text-gray-700">{exposition.description}</p>
+                </div>
+                <img className="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="https://vida.cz/images/headers/main/145/_thumb1/expoziceweb-1.webp" alt="" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
