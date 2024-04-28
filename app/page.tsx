@@ -46,7 +46,7 @@ export default function Home() {
                   {data.map(item => (
                     <div key={item.floor}>
                       <input id={'floor' + item.floor} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
-                      <label htmlFor={'floor' + item.floor} className="ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 text-blue-800 hover:bg-blue-200 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-blue-900 dark:text-blue-400">
+                      <label htmlFor={'floor' + item.floor} className="ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 disabled:pointer-events-none hover:bg-blue-200 text-blue-400">
                         {item.floor}
                       </label>
                     </div>
