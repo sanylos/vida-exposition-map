@@ -9,13 +9,13 @@ export default function Home() {
   const expositions = [
     {
       name: 'Planeta',
-      description: 'Nejdřív rozpoutejte tornádo a pokuste se ustát zemětřesení, pak si v rotující místnosti užijte účinky odstředivé síly a pohrajte si s oceánem v lahvi.',
+      description: 'Rozpoutejte tornádo a pokuste se ustát zemětřesení...',
       floor: 1,
       image: 'https://vida.cz/images/headers/main/132/_thumb1/expimgplaneta.png'
     },
     {
       name: 'Člověk',
-      description: 'Popis člověka...',
+      description: 'V obřím srdci se zaposlouchejte do vlastního tepu...',
       floor: 1,
       image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
     },
