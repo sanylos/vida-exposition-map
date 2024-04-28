@@ -40,13 +40,13 @@ export default function Home() {
                 <div className="font-bold text-3xl mb-2">Mapa expozice</div>
                 <div className="flex items-center">
                   {/*JSON.stringify(selectedFloor)*/}
-                  <div className="bg-gray-200 rounded py-3 px-4">
+                  <div className="bg-gray-200 rounded-lg py-3 px-4">
                     <FaStairs className="text-xl" />
                   </div>
                   {data.map(item => (
                     <div key={item.floor}>
                       <input id={'floor' + item.floor} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
-                      <label htmlFor={'floor' + item.floor} className="ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 disabled:pointer-events-none hover:bg-blue-200 text-blue-400">
+                      <label htmlFor={'floor' + item.floor} className="ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-200 text-blue-400">
                         {item.floor}
                       </label>
                     </div>
