@@ -78,7 +78,7 @@ export default function Home() {
               <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
             </div>
           </div>
-          <div className="ms-1 rounded overflow-hidden shadow-lg text-black relative z-10 h-full">
+          <div className="w-1/3 ms-1 rounded overflow-hidden shadow-lg text-black relative z-10 h-full">
             {expositions.map((exposition, index) => (
               <div key={index} className="mb-1 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
                 <div className="flex flex-col justify-between p-4 leading-normal">
