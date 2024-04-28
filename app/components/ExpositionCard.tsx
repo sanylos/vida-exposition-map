@@ -2,12 +2,13 @@
 interface Exposition {
     name: string,
     description: string,
-    floor: string
+    floor: number,
+    image: string
 }
 const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
     return (
         <div style={{
-            backgroundImage: 'url("https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png")',
+            backgroundImage: 'url(' + exposition.image + ')',
         }}
             className="bg-cover bg-start hover:bg-center mb-1 flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100">
             <div className="flex flex-col justify-between p-4 leading-normal">
