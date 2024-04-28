@@ -8,14 +8,16 @@ export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
   const expositions = [
     {
-      name: 'Bastlírna',
-      description: 'Popis bastlírny...',
+      name: 'Planeta',
+      description: 'Nejdřív rozpoutejte tornádo a pokuste se ustát zemětřesení, pak si v rotující místnosti užijte účinky odstředivé síly a pohrajte si s oceánem v lahvi.',
       floor: 1,
+      image: 'https://vida.cz/images/headers/main/132/_thumb1/expimgplaneta.png'
     },
     {
       name: 'Člověk',
       description: 'Popis člověka...',
       floor: 1,
+      image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
     },
     {
       name: 'Mikrosvět',
