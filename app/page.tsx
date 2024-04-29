@@ -95,7 +95,7 @@ export default function Home() {
               <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
             </div>
           </div>
-          <div className="sm:w-1/3 ms-1 rounded overflow-hidden shadow-lg text-black relative z-10 h-full">
+          <div className="w-full lg:w-1/3 rounded overflow-hidden shadow-lg text-black relative z-10 h-full">
             {expositions.map((exposition, index) => (
               <div key={index}>
                 <ExpositionCard exposition={exposition} />
