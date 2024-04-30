@@ -80,7 +80,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
-              <Image width={1500} height={960} src="/images/expozice_mapa1.png" alt="Mapa expozice" />
+              <Image width={1500} height={960} src={floors.find(floor => floor.number === selectedFloor)?.map_url || ''} alt="Mapa expozice" />
             </div>
           </div>
           <div className="w-full lg:w-1/3 rounded overflow-hidden shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
