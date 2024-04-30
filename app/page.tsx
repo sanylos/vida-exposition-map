@@ -40,30 +40,18 @@ export default function Home() {
     {
       name: 'Venkovní expozice',
       description: 'Hravé exponáty pod širým nebem. Těšte se na hučící kámen, tlakovou fontánu nebo akustické uši. To vše s krásným výhledem na pavilony brněnského výstaviště.',
-      floor: 1,
+      floor: 2,
       image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
     },
   ]
-  const data = [
+  const floors = [
     {
-      floor: 1,
+      number: 1,
       map_url: '/images/expozice_mapa1.png',
-      expositions: [
-        {
-          title: "Nejaka expozice",
-          description: "Tady se neco nachazi"
-        }
-      ],
     },
     {
-      floor: 2,
-      map_url: '/images/expozice_mapa1.png',
-      expositions: [
-        {
-          title: "Nejaka expozice v druhem podlazi",
-          description: "Tady se neco nachazi"
-        }
-      ],
+      number: 2,
+      map_url: '/images/expozice_mapa2.png',
     }
   ]
   return (
@@ -82,11 +70,11 @@ export default function Home() {
                   <div className="bg-gray-200 rounded-lg py-3 px-4">
                     <FaStairs className="text-xl" />
                   </div>
-                  {data.map(item => (
-                    <div key={item.floor}>
-                      <input id={'floor' + item.floor} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={item.floor} name="floorSelectionRadio" className="hidden" />
-                      <label htmlFor={'floor' + item.floor} className={(selectedFloor == item.floor && "bg-blue-300 text-blue-900") + " ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-300 text-blue-400"}>
-                        {item.floor}
+                  {floors.map(floor => (
+                    <div key={floor.number}>
+                      <input id={'floor' + floor.number} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={floor.number} name="floorSelectionRadio" className="hidden" />
+                      <label htmlFor={'floor' + floor.number} className={(selectedFloor == floor.number && "bg-blue-300 text-blue-900") + " ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-300 text-blue-400"}>
+                        {floor.number}
                       </label>
                     </div>
                   ))}
