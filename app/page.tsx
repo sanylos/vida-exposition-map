@@ -6,7 +6,26 @@ import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
+  //Ve druhém patře se nachází: bufet, dočasná expozice a pár exponátů Přesné umístění a názvy nejsou důležité. Důležitá je celková funkcionalita aplikace
   const expositions = [
+    {
+      name: 'Pár exponátů',
+      description: 'Popisek pro pár exponátů',
+      floor: '2',
+      image: ''
+    },
+    {
+      name: 'Dočasná expozice',
+      description: 'Popisek pro dočasnou expozici',
+      floor: '2',
+      image: ''
+    },
+    {
+      name: 'Bufet',
+      description: 'Popisek pro bufet',
+      floor: '2',
+      image: ''
+    },
     {
       name: 'Planeta',
       description: 'Nejdřív rozpoutejte tornádo a pokuste se ustát zemětřesení, pak si v rotující místnosti užijte účinky odstředivé síly a pohrajte si s oceánem v lahvi.',
