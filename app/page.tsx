@@ -105,7 +105,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full lg:w-1/3 rounded overflow-hidden shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
+          <div className="w-full overflow-x-hidden lg:w-1/3 rounded shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
             {expositions.filter(exposition => exposition.floor == selectedFloor).map((exposition, index) => (
               <div key={index}>
                 <ExpositionCard exposition={exposition} />
