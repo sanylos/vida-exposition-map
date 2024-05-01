@@ -41,25 +41,25 @@ export default function Home() {
       name: 'Mikrosvět',
       description: 'Postavte si magnetickou sochu, užijte si pohled na elektrický oblouk, který stoupá po žebříku a prozkoumejte svět pod mikroskopem.',
       floor: 1,
-      image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
+      image: 'https://vida.cz/images/headers/main/133/_thumb1/expimgmikrosvet.png'
     },
     {
       name: 'Civilizace',
       description: 'Rozjeďte ledničku na lidský pohon, postavte z lega vlastní střed Brna, napište svá přání na zeď naděje a v hlukové místnosti zkuste překřičet tryskáč.',
       floor: 1,
-      image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
+      image: 'https://vida.cz/images/headers/main/153/_thumb1/expimgcivilizace.png'
     },
     {
       name: 'Dětské science centrum',
       description: 'Na nejmenší návštěvníky tu čeká dopravní hřiště, kuličková dráha, archeologické pískoviště, obří piano, oblíbený tobogán i vodní hrátky s mlýnky.',
       floor: 1,
-      image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
+      image: 'https://vida.cz/images/headers/main/154/_thumb1/expimgdetske-sc.png'
     },
     {
       name: 'Venkovní expozice',
       description: 'Hravé exponáty pod širým nebem. Těšte se na hučící kámen, tlakovou fontánu nebo akustické uši. To vše s krásným výhledem na pavilony brněnského výstaviště.',
       floor: 1,
-      image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
+      image: 'https://vida.cz/images/headers/main/1454/_thumb1/venkovni-expozice.jpg'
     },
   ]
   const floors = [
