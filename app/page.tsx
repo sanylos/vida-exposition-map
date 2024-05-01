@@ -6,6 +6,14 @@ import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
+  const exhibits = [
+    {
+      name: 'ARCHIMÉDŮV ŠROUB',
+      description: 'Archimédův šroub je jedním z nejstarších způsobů čerpání vody. Toto jednoduché čerpadlo sestrojil a popsal Archimédés (287–212 př. n. l.). Inspiroval se ve starověkém Egyptě, kde vodu pumpovali podobným způsobem. Dříve byl Archimédův šroub důležitým prvkem na lodích, kde bylo jeho úkolem odstranění odpadní vody. Své využití má i dnes. Podobné šnekové čerpadlo najdeme třeba v brněnské čistírně odpadních vod, využívá se také k transportu zrní v kombajnech.',
+      image: 'https://vida.cz/images/headers/main/576/_thumb5/archimeduv-sroub-v-akci.JPG',
+
+    }
+  ]
   const expositions = [
     {
       name: 'Pár exponátů',
