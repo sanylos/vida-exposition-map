@@ -6,7 +6,6 @@ import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
-  //Ve druhém patře se nachází: bufet, dočasná expozice a pár exponátů Přesné umístění a názvy nejsou důležité. Důležitá je celková funkcionalita aplikace
   const expositions = [
     {
       name: 'Pár exponátů',
@@ -59,7 +58,7 @@ export default function Home() {
     {
       name: 'Venkovní expozice',
       description: 'Hravé exponáty pod širým nebem. Těšte se na hučící kámen, tlakovou fontánu nebo akustické uši. To vše s krásným výhledem na pavilony brněnského výstaviště.',
-      floor: 2,
+      floor: 1,
       image: 'https://vida.cz/images/headers/main/131/_thumb1/expimgclovek.png'
     },
   ]
@@ -87,7 +86,6 @@ export default function Home() {
               <div className="flex justify-between items-center">
                 <div className="font-bold text-3xl mb-2">Mapa expozice</div>
                 <div className="flex items-center">
-                  {/*JSON.stringify(selectedFloor)*/}
                   <div className="bg-gray-200 rounded-lg py-3 px-4">
                     <FaStairs className="text-xl" />
                   </div>
