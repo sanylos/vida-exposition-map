@@ -18,19 +18,19 @@ export default function Home() {
     {
       name: 'Pár exponátů',
       description: 'Popisek pro pár exponátů',
-      floor: '2',
+      floor: 2,
       image: ''
     },
     {
       name: 'Dočasná expozice',
       description: 'Popisek pro dočasnou expozici',
-      floor: '2',
+      floor: 2,
       image: ''
     },
     {
       name: 'Bufet',
       description: 'Popisek pro bufet',
-      floor: '2',
+      floor: 2,
       image: ''
     },
     {
