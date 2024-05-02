@@ -9,6 +9,12 @@ const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
         description?: string
     }
     const [exposition, setExposition] = useState<Exposition>({});
+    const [exhibits, setExhibits] = useState([]);
+    const fetchExhibits = async () => {
+        const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/expositions/' + params.exposition + '/exhibits');
+        const data = await res.json();
+        setExhibits(Object.values(data));
+    }
     const fetchExposition = async () => {
         const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/expositions/' + params.exposition);
         const data = await res.json();
@@ -16,6 +22,7 @@ const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
     }
     useEffect(() => {
         fetchExposition();
+        fetchExhibits();
     }, [])
     return (
         <>
