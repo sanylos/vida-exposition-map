@@ -1,9 +1,11 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { DiVim } from "react-icons/di";
 
 const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
+    interface Exposition {
+        name: string
+    }
     const [exposition, setExposition] = useState({});
     const fetchExposition = async () => {
         const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/expositions/' + params.exposition);
