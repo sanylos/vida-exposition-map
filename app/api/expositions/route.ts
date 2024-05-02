@@ -66,5 +66,5 @@ export async function GET(request: Request) {
             id: 'venkovni-expozice'
         },
     ]
-    return NextResponse.json({ ...expositions })
+    return NextResponse.json(Object.values(expositions))
 }
