@@ -4,7 +4,7 @@ interface Exposition {
     description: string,
     floor: number,
     image: string,
-    path: string
+    id: string
 }
 import Link from "next/link";
 import { MdArrowForwardIos } from "react-icons/md";
@@ -20,7 +20,7 @@ const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
                 <p className="mb-3 font-normal text-gray-100">{exposition.description.slice(0, 64)}...</p>
             </div>
             <div className="flex flex-col h-full justify-end">
-                <Link href={exposition.path}>
+                <Link href={'/' + exposition.id}>
                     <button type="button" className="flex items-center justify-between text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 shadow-lg shadow-teal-500/50 dark:shadow-lg dark:shadow-teal-800/80 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2">
                         Exponáty
                         <MdArrowForwardIos className="ms-1 text-md" />
