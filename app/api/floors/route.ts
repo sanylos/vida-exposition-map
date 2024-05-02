@@ -11,5 +11,5 @@ export async function GET(request: Request) {
             map_url: '/images/expozice_mapa2.png',
         }
     ]
-    return NextResponse.json({ ...floors })
+    return NextResponse.json(Object.values(floors))
 }
