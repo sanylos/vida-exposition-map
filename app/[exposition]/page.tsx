@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { DiVim } from "react-icons/di";
 
 const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
     const [exposition, setExposition] = useState({});
@@ -13,7 +14,18 @@ const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
         fetchExposition();
     }, [])
     return (
-        <div>{JSON.stringify(exposition)}</div>
+        <>
+            {
+                exposition ?
+                    <div>
+                        <h1>{exposition.name}</h1>
+                    </div>
+                    :
+                    <div>
+                        <h1>Tato expozice nebyla nalezena :(</h1>
+                    </div>
+            }
+        </>
     )
 }
 
