@@ -8,8 +8,13 @@ const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
         name?: string,
         description?: string
     }
+    interface Exhibit {
+        name: string,
+        description: string,
+        image: string,
+    }
     const [exposition, setExposition] = useState<Exposition>({});
-    const [exhibits, setExhibits] = useState([]);
+    const [exhibits, setExhibits] = useState<Exhibit[]>([]);
     const fetchExhibits = async () => {
         const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/expositions/' + params.exposition + '/exhibits');
         const data = await res.json();
