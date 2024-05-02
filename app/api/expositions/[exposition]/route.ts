@@ -8,5 +8,8 @@ export async function GET(request: NextRequest, { params }: { params: { expositi
     let expositions: exposition[] = await res.json();
     expositions = Object.values(expositions);
     const filteredExposition: exposition | undefined = expositions.find(exposition => exposition.id == params.exposition)
-    return NextResponse.json(filteredExposition)
+    if (filteredExposition) {
+        return NextResponse.json(filteredExposition);
+    }
+    return NextResponse.json(null);
 }
