@@ -5,9 +5,10 @@ import { useEffect, useState } from "react"
 
 const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
     interface Exposition {
-        name: string
+        name?: string,
+        description?: string
     }
-    const [exposition, setExposition] = useState({});
+    const [exposition, setExposition] = useState<Exposition>({});
     const fetchExposition = async () => {
         const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/expositions/' + params.exposition);
         const data = await res.json();
@@ -20,9 +21,16 @@ const ExpositionPage = ({ params }: { params: { exposition: string } }) => {
         <>
             {
                 exposition ?
-                    <div>
-                        <h1>{exposition.name}</h1>
-                    </div>
+                    <main className="pt-5 pb-16 lg:pb-24 bg-white antialiased">
+                        <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
+                            <article className="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-blue">
+                                <header className="mb-4 lg:mb-6 not-format">
+                                    <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl">{exposition.name}</h1>
+                                </header>
+                                <p className="lead">{exposition.description}</p>
+                            </article>
+                        </div>
+                    </main>
                     :
                     <div className="bg-gray-200 w-full px-16 md:px-0 h-screen flex items-center justify-center">
                         <div className="bg-white border border-gray-200 flex flex-col items-center justify-center px-4 md:px-8 lg:px-24 py-8 rounded-lg shadow-2xl">
