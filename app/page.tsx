@@ -4,6 +4,7 @@ import './page.scss'
 import { useEffect, useState } from "react";
 import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
+import { motion } from "framer-motion";
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
   const [expositions, setExpositions] = useState([]);
@@ -57,10 +58,14 @@ export default function Home() {
           </div>
 
           <div className="w-full overflow-x-hidden lg:w-1/3 rounded shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
-            {expositions.filter(exposition => exposition.floor == selectedFloor).map((exposition, index) => (
-              <div key={index}>
+            {expositions.filter((exposition, index) => exposition.floor == selectedFloor).map((exposition, index) => (
+              <motion.div key={index}
+                initial={{ x: '-100vw' }}
+                animate={{ x: 0 }}
+                transition={{ duration: 0.8, delay: index / 10, type: "tween" }}
+              >
                 <ExpositionCard exposition={exposition} />
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
