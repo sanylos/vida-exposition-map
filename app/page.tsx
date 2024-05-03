@@ -6,9 +6,16 @@ import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
 import { motion } from "framer-motion";
 import Loading from "./components/Loading";
+export interface Exposition {
+  name: string,
+  description: string,
+  floor: number,
+  image: string,
+  id: string
+}
 export default function Home() {
   const [selectedFloor, setSelectedFloor] = useState<number>(1);
-  const [expositions, setExpositions] = useState([]);
+  const [expositions, setExpositions] = useState<Exposition[]>([]);
   const fetchExpositions = async () => {
     const res = await fetch(process.env.NEXT_PUBLIC_URL + '/api/floors/' + selectedFloor + '/expositions');
     let data = await res.json();
