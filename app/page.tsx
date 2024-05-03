@@ -4,7 +4,7 @@ import './page.scss'
 import { useEffect, useState } from "react";
 import { FaStairs } from "react-icons/fa6";
 import ExpositionCard from "./components/ExpositionCard";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Loading from "./components/Loading";
 export interface Exposition {
   name: string,
@@ -68,17 +68,19 @@ export default function Home() {
           <div className="w-full overflow-x-hidden lg:w-1/3 rounded shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
             {expositions.length >= 1 ?
               <>
-                {
-                  expositions.filter((exposition, index) => exposition.floor == selectedFloor).map((exposition, index) => (
-                    <motion.div key={index}
-                      initial={{ x: '-110%' }}
-                      animate={{ x: 0 }}
-                      transition={{ duration: 1, delay: (index + 1)/10, type: "spring" }}
-                    >
-                      <ExpositionCard exposition={exposition} />
-                    </motion.div>
-                  ))
-                }
+                <AnimatePresence >
+                  {
+                    expositions.map((exposition, index) => (
+                      <motion.div key={exposition.id}
+                        initial={{ x: '-110%' }}
+                        animate={{ x: 0 }}
+                        transition={{ duration: 1, delay: (index + 1) / 10, type: "spring" }}
+                      >
+                        <ExpositionCard exposition={exposition} />
+                      </motion.div>
+                    ))
+                  }
+                </AnimatePresence>
               </>
               : <Loading />}
           </div>
