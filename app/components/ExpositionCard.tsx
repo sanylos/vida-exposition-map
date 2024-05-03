@@ -1,11 +1,5 @@
 "use client"
-interface Exposition {
-    name: string,
-    description: string,
-    floor: number,
-    image: string,
-    id: string
-}
+import { Exposition } from "../page";
 import Link from "next/link";
 import { MdArrowForwardIos } from "react-icons/md";
 const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
