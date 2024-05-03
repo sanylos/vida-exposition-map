@@ -52,12 +52,12 @@ export default function Home() {
                     <FaStairs className="text-xl" />
                   </div>
                   {floors.map(floor => (
-                    <div key={floor.number}>
+                    <motion.div key={floor.number} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
                       <input id={'floor' + floor.number} onChange={e => setSelectedFloor(parseInt(e.target.value))} type="radio" value={floor.number} name="floorSelectionRadio" className="hidden" />
                       <label htmlFor={'floor' + floor.number} className={(selectedFloor == floor.number && "bg-blue-300 text-blue-900") + " ms-1 py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-100 hover:bg-blue-300 text-blue-400"}>
                         {floor.number}
                       </label>
-                    </div>
+                    </motion.div>
                   ))}
                 </div>
               </div>
