@@ -71,9 +71,9 @@ export default function Home() {
                 {
                   expositions.filter((exposition, index) => exposition.floor == selectedFloor).map((exposition, index) => (
                     <motion.div key={index}
-                      initial={{ x: '-100vw' }}
+                      initial={{ x: '-110%' }}
                       animate={{ x: 0 }}
-                      transition={{ duration: 1, delay: (index + 1) / 10, type: "tween" }}
+                      transition={{ duration: 1, delay: (index + 1)/10, type: "spring" }}
                     >
                       <ExpositionCard exposition={exposition} />
                     </motion.div>
