@@ -67,21 +67,21 @@ export default function Home() {
 
           <div className="w-full overflow-x-hidden lg:w-1/3 rounded shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
             {expositions.length >= 1 ?
-              <>
-                <AnimatePresence >
-                  {
-                    expositions.map((exposition, index) => (
-                      <motion.div key={exposition.id}
-                        initial={{ x: '-110%' }}
-                        animate={{ x: 0 }}
-                        transition={{ duration: 1, delay: (index + 1) / 10, type: "spring" }}
-                      >
-                        <ExpositionCard exposition={exposition} />
-                      </motion.div>
-                    ))
-                  }
-                </AnimatePresence>
-              </>
+              <AnimatePresence mode="wait" initial={true}>
+                {
+                  expositions.map((exposition, index) => (
+                    <motion.div
+                      key={exposition.id}
+                      initial={{ x: '-110%' }}
+                      animate={{ x: 0 }}
+                      transition={{ duration: 1, delay: (index + 1) / 10, type: "spring" }}
+                      exit={{ x: '-110%' }}
+                    >
+                      <ExpositionCard exposition={exposition} />
+                    </motion.div>
+                  ))
+                }
+              </AnimatePresence>
               : <Loading />}
           </div>
         </div>
