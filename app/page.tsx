@@ -82,7 +82,10 @@ export default function Home() {
                   ))
                 }
               </AnimatePresence>
-              : <Loading />}
+              :
+              <div className="flex justify-center m-5 scale-150">
+                <Loading />
+              </div>}
           </div>
         </div>
       </div>
