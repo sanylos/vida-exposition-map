@@ -19,7 +19,7 @@ const Navbar = () => {
         </g>
         </g>
         </svg>
-        <span className='me-10 text-xl font-medium'>
+        <span className='me-10 text-xl font-medium text-white'>
           MAPA EXPOZICE
         </span>
       </div>
