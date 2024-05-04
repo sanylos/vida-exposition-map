@@ -2,7 +2,7 @@
 import { Exposition } from "../page";
 import Link from "next/link";
 import { MdArrowForwardIos } from "react-icons/md";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -18,20 +18,24 @@ const ExpositionCard = ({ exposition }: { exposition: Exposition }) => {
                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-stone-200">{exposition.name}</h5>
                 <p className="mb-3 font-normal text-gray-100">{exposition.description.slice(0, 64)}...</p>
             </div>
-            {isHovered && (
-                <div className="absolute bottom-0 right-0">
-                    <Link href={'/' + exposition.id}>
-                        <motion.button type="button" className="flex items-center justify-between text-white hover:bg-gradient-to-br bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 shadow-lg shadow-teal-500/50 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
-                            initial={{ scale: 0 }}
-                            animate={{ scale: 1 }}
-                            transition={{ duration: 0.3, type: "spring" }}
-                        >
-                            Exponáty
-                            <MdArrowForwardIos className="ms-1 text-md" />
-                        </motion.button>
-                    </Link>
-                </div>
-            )}
+            <AnimatePresence>
+                {isHovered && (
+
+                    <div className="absolute bottom-0 right-0">
+                        <Link href={'/' + exposition.id}>
+                            <motion.button type="button" className="flex items-center justify-between text-white hover:bg-gradient-to-br bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 shadow-lg shadow-teal-500/50 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                                initial={{ scale: 0 }}
+                                animate={{ scale: 1 }}
+                                transition={{ duration: 0.3, type: "spring" }}
+                                exit={{ scale: 0 }}
+                            >
+                                Exponáty
+                                <MdArrowForwardIos className="ms-1 text-md" />
+                            </motion.button>
+                        </Link>
+                    </div>
+                )}
+            </AnimatePresence>
         </motion.div>
 
     )
