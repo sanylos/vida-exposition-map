@@ -41,7 +41,7 @@ export default function Home() {
         <div className="overlay"></div>
         <div className="absolute inset-0 bg-black opacity-50"></div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-start p-1 md:p-10">
+        <div className="flex flex-col 2xl:flex-row justify-center items-start p-1 md:p-10">
 
           <div className="rounded overflow-hidden shadow-lg bg-white text-black relative z-10">
             <div className="px-6 py-4">
@@ -65,7 +65,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="w-full overflow-x-hidden lg:w-1/3 rounded shadow-lg text-black relative z-10 h-screen lg:overflow-y-auto">
+          <div className="w-full overflow-x-hidden 2xl:w-1/3 rounded shadow-lg text-black relative z-10 2xl:h-screen 2xl:overflow-y-auto">
             {expositions.length >= 1 ?
               <AnimatePresence mode="wait" initial={true}>
                 {
